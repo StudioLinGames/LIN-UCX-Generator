@@ -1,0 +1,3 @@
+# Preserve the approved extension files byte-for-byte across Git checkouts.
+src/** -text
+LICENSE -text

@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+id = "lin_ucx_generator"
+version = "1.4.1"
+name = "LIN UCX Generator"
+tagline = "Generate UCX collision meshes for game assets"
+maintainer = "Studio Lin Games"
+copyright = ["2026 Studio Lin Games"]
+type = "add-on"
+blender_version_min = "5.2.2"
+license = ["SPDX:GPL-3.0-or-later"]
+tags = ["Object", "Pipeline"]
+[build]
+paths_exclude_pattern = ["__pycache__/", "*.pyc"]
