@@ -37,9 +37,8 @@ display, editable collision meshes, native Undo and safe collision management.
 
 ## Download and installation
 
-> **Download status: not yet available.** The v1.4.1 release has not been published.
-> Planned release page: [v1.4.1](https://github.com/StudioLinGames/LIN-UCX-Generator/releases/tag/v1.4.1).
-> Once published, look for `lin_ucx_generator-1.4.1.zip` in its release assets.
+> **[Download LIN UCX Generator v1.4.1](https://github.com/StudioLinGames/LIN-UCX-Generator/releases/download/v1.4.1/lin_ucx_generator-1.4.1.zip)** — 35.4 KiB.
+> [Official release notes and assets](https://github.com/StudioLinGames/LIN-UCX-Generator/releases/tag/v1.4.1).
 
 Install `lin_ucx_generator-1.4.1.zip` without extracting it:
 **Edit > Preferences > Get Extensions > menu > Install from Disk**. Enable the
