@@ -1,26 +1,51 @@
+<div align="center">
+
 # LIN UCX Generator
 
 **Less time creating collisions. More time creating games.**
 
-Automatic collision generation for Blender and Unreal Engine. Free, lightweight
-and open source. Developed by **Studio Lin Games**. Version **1.4.1**, approved by
-the developer as a stable-publication candidate with documented limitations.
+Automatic collision generation for Blender and Unreal Engine.
+
+Free · Lightweight · Open Source
+
+Developed by **Studio Lin Games**.
+
+![Version 1.4.1](https://img.shields.io/badge/Version-1.4.1-blue)
+![GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue)
+![Blender](https://img.shields.io/badge/Blender-5.2.2%20%7C%205.3.0-orange)
+![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-Collision-313131)
+![No external dependencies](https://img.shields.io/badge/External%20dependencies-None-brightgreen)
+
+**7 collision methods · 35.4 KiB package · Zero external dependencies**
+
+Version 1.4.1 — First public release, with documented limitations.
+
+</div>
 
 ## Features
 
-Seven collision methods, evaluated modifiers, multiple selected assets, exact
-Unreal collision naming, configurable parenting/collections/display, editable
-collision meshes, native Undo, safe collision management and evaluated statistics.
-No external dependencies, telemetry, runtime downloads or integrated FBX exporter.
+- **Mesh Collision** — preserve valid convex geometry or generate one exterior hull for irregular solid assets.
+- **Segmented Collision** — generate independent convex pieces from suitable closed concave geometry while attempting to preserve openings.
+- **Non-destructive Collision Simplification** — control complexity with an editable, unapplied native Decimate modifier.
+- **Select Asset + Collisions** — prepare the source and its complete collision group for FBX export.
+- **Multiple asset support** — generate and manage collision for several selected meshes.
+- **Native Unreal Engine collision naming** — UCX, UBX, USP and UCP names matching the source asset.
+- **Zero external dependencies** — no runtime downloads, telemetry or network connection required by the extension.
 
-## Installation
+Includes evaluated modifiers and statistics, configurable parenting, collections and
+display, editable collision meshes, native Undo and safe collision management.
 
-Install the approved `lin_ucx_generator-1.4.1.zip` without extracting it:
+## Download and installation
+
+> **Download status: not yet available.** The v1.4.1 release has not been published.
+> Planned release page: [v1.4.1](https://github.com/StudioLinGames/LIN-UCX-Generator/releases/tag/v1.4.1).
+> Once published, look for `lin_ucx_generator-1.4.1.zip` in its release assets.
+
+Install `lin_ucx_generator-1.4.1.zip` without extracting it:
 **Edit > Preferences > Get Extensions > menu > Install from Disk**. Enable the
 extension, enter Object Mode and open **3D Viewport > Sidebar (N) > LIN Tools**.
 Save your work before replacing an older installation. Existing collisions and
-supported scene settings are retained. No public download link is provided here
-before the release is actually published.
+supported scene settings are retained.
 
 ## Collision methods
 
@@ -68,21 +93,22 @@ Collision As Simple**. See [the user guide](docs/user_guide.md).
 
 ## Verified compatibility and limitations
 
-Verified on **Windows x64, Blender 5.2.2 LTS and 5.3.0**. The minimum remains 5.2.2;
-Blender 4.2, Linux and macOS are unverified. No binary platform restriction is set.
+Verified on **Windows x64 with Blender 5.2.2 LTS and 5.3.0**.
 
-Convex envelopes can fill holes. Segmented requires suitable closed solids and may
-reject open, non-manifold, overly complex or numerically difficult inputs. Very tiny
-open synthetic models with complex transforms can be safely rejected. Original
-independent automation recorded **198/200 passes**, with seeds 3006/3009 rejected;
-the developer later observed manual success for 3006 and continued rejection for
-3009. This discrepancy is unresolved and documented, not relabelled as an automated
-pass. Review all generated and simplified collision before export. See
-[known limitations](docs/known_limitations.md) and [testing](docs/testing.md).
+Convex envelopes can fill holes and concavities. Segmented Collision requires
+suitable closed solids and may reject open, non-manifold, overly complex or
+numerically difficult geometry. Extremely small or thin inputs and complex
+transforms can also cause safe rejection. Simplified geometry may need correction
+before export; always inspect the generated and evaluated collision.
 
-The developer reports successful real Blender/Unreal testing, including Native Box
-and player passage through a segmented arch. These are manual reports, not automated
-Unreal tests. No claim is made that every geometry or gameplay query is supported.
+The independent synthetic validation recorded **198/200 passes**, with two known
+safe rejections. Full results, seeds 3006/3009 and the unresolved difference between
+manual and automated results remain in [testing](docs/testing.md) and
+[known limitations](docs/known_limitations.md).
+
+Studio Lin Games reports successful manual Blender/Unreal testing, including Native
+Box and player passage through a segmented arch. These are manual results, not
+automated Unreal tests or a guarantee for every geometry and gameplay query.
 
 ## License, contributing and contact
 
@@ -90,7 +116,3 @@ Unreal tests. No claim is made that every geometry or gameplay query is supporte
 Copyright (C) 2026 Studio Lin Games. Provided without warranty.
 
 Contact: [studiolingames@gmail.com](mailto:studiolingames@gmail.com).
-
-Release preparation targets `StudioLinGames/LIN-UCX-Generator`; repository creation,
-push and release publication require the owner's separate approval. No Blender
-Extensions listing, screenshots, videos or download URLs are invented.
